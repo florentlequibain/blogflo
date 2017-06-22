@@ -25,11 +25,22 @@
         <figure>
           <img src="img/lego.png" alt="lego espace">
         </figure>
-        <h1>FUTURE!</h1>
+        <h1 id="title">FUTURE!</h1>
       </div>
       <p class="soustitre">An other way to see tech</p>
     </div>
   </header>
+
+  <script>
+    // var montitre = document.getElementById('title');
+    // alert(montitre);
+    //
+    var articles = document.getElementsByTagName('article');
+
+    for (var i = 0, c = articles.length ; i < c ; i++) {
+    alert('Element n° ' + (i + 1) + ' : ' + articles[i]);
+    }
+</script>
   <!-- ~~~~~~~~~~~~~~~ END HEADER ~~~~~~~~~~~~~~~ -->
 
 
@@ -47,8 +58,10 @@
       <div class="colonne1">
         <article class="articlesimple articlecolor1">
           <figure class="figurearticle">
-            <img src="img/article1" alt="">
+            <p id="textoverimg1"></p>
+            <img src="img/article1" id="imgarticle1" alt="de la grosse tech">
           </figure>
+
           <h5>Twitter tweaks its design</h5>
           <div class="divsoustitrearticle">
             <img src="img/horloge" alt="horloge">
@@ -129,6 +142,74 @@
  <!-- ~~~~~~~~~~~~~~~END SECTION ~~~~~~~~~~~~~~~ -->
 
 
+ <!-- ~~~~~~~~~~~~~~~ TABLE ~~~~~~~~~~~~~~~ -->
+<section class="containertableau">
+  <h3 class="titretable">JOLI TABLEAU</h3>
+
+  <div class="containeronglets">
+    <div class="onglet1">
+      <p>onglet 1</p>
+    </div>
+
+    <div class="onglet2">
+      <p>onglet 2</p>
+    </div>
+
+    <div class="onglet3">
+      <p>onglet 3</p>
+    </div>
+  </div>
+
+  <div class="page1">
+    <p>Présentation
+
+Terminons ce chapitre avec une dernière fonction, dont le but est de récupérer tous les éléments HTML d'une classe donnée.
+Comme il n'en existe pas, nous allons la créer.
+
+Notre fonction possèdera un argument obligatoire : le nom de la classe.
+L'argument suivant, facultatif, sera l'élément "racine" pour la rechercher : s'il n'est pas précisé, on recherche dans tout le document. Sinon, on cherche uniquement parmi les "fils" de cet élément.
+
+Nous utiliserons également une regex pour savoir si la fonction possède la classe recherchée, afin de la rendre compatible avec les multi-classes.</p>
+  </div>
+
+  <div class="page2">
+    <p>Récupérer les classes dans un tableau
+
+Si on affiche en JS l'attribut className d'un objet, on récupère toutes les classes dans une seule chaîne de caractères.
+
+Dans l'exemple précédent, ça nous donne :
+
+Citation : div.className
+
+    titre encadre important
+
+Pas très pratique.
+
+Qu'à cela ne tienne, si on veut récupérer les noms de classes dans un tableau JS, il nous suffit d'utiliser la méthode split de l'objet String, pour découper notre chaîne de caractères aux endroits où se trouvent des espaces.</p>
+  </div>
+
+  <div class="page3">
+    <p>Un grand classique du JS est d'afficher ou de masquer à volonté les éléments de la page.
+
+Derrière ce tour de passe-passe se cachent simplement les propriétés CSS display et visibility, qu'on modifie à n'importe quel moment en utilisant l'objet style comme vous avez appris à le faire.
+
+Nous allons dans cette partie créer deux fonctions :
+
+    toggleVisibility(elmt) : pour rendre l'élément visible ou invisible ;
+
+    toggleDisplay(elmt) : pour afficher ou masquer l'élément.
+
+Quelques remarques
+visibility et display
+
+Rappelons en images la différence entre les deux propriétés CSS suivantes :</p>
+  </div>
+</section>
+
+ <!-- ~~~~~~~~~~~~~~~END TABLE ~~~~~~~~~~~~~~~ -->
+
+
+
 
 
  <!-- ~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~ -->
@@ -201,6 +282,7 @@ return (Value > 9) ? "" + Value : "0" + Value;
 <div class="timer">
   <span>You spend a lot of time here! :</span>
   <label id="minutes">00</label>:<label id="seconds">00</label>
+
     <script type="text/javascript">
         var minutesLabel = document.getElementById("minutes");
         var secondsLabel = document.getElementById("seconds");
@@ -229,6 +311,7 @@ return (Value > 9) ? "" + Value : "0" + Value;
     </script>
 </div>
 
+<div id="chrono" class="col-xs-12 col-sm-12 col-md-12  col-lg-10 mt-1 mb-3 mx-auto"></div>
 
 </footer>
  <!-- ~~~~~~~~~~~~~~~ END FOOTER ~~~~~~~~~~~~~~~ -->

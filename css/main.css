@@ -209,6 +209,7 @@ h1{
   .figurearticle{
     width: 95%;
     margin: 10px;
+    position: relative;
   }
 
   .divsoustitrearticle{
@@ -228,7 +229,70 @@ h1{
     color: rgba(100,100,100,1);
     font-size: 15px;
   }
+
+  #textoverimg1{
+    z-index: 10;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+  }
 /*~~~~~~~~~~~~~~~~END MAIN SECTION ~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+
+/*~~~~~~~~~~~~~~~~ TABLE ~~~~~~~~~~~~~~~~~~~~*/
+.containertableau{
+  background-color: red;
+}
+
+.containeronglets{
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.onglet1, .onglet2, .onglet3{
+  width: 33.33%;
+  background-color: green;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.onglet1{
+  background-color: rgba(244,244,244,1);
+  border-top: solid grey 1px;
+  border-left: solid grey 1px;
+  border-right: solid grey 1px;
+  border-bottom: solid rgba(244,244,244,1) 1px;
+}
+
+.page1{
+  background-color: rgba(244,244,244,1);
+
+}
+
+.onglet1 p{
+  background-color: yellow;
+}
+
+
+
+
+
+.page1, .page2 ,.page3{
+  width: 60%;
+  height: 200px;
+  margin: auto;
+  padding: 20px;
+  border: solid grey 1px;
+}
+/*~~~~~~~~~~~~~~~~END TABLE ~~~~~~~~~~~~~~~~~~~~*/
+
 
 
 
